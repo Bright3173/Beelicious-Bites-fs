@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./beelcious_be
+    container_name: backend
+    restart: always
+    env_file:
+      - ./beelcious_be/.env
+    ports:
+      - "5000:5000"
+
+  frontend:
+    build: ./beelicious_fe
+    container_name: frontend
+    restart: always
+    ports:
+      - "3000:3005"
+    depends_on:
+      - backend
