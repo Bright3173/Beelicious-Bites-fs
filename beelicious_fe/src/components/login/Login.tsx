@@ -90,7 +90,7 @@ const Login = () => {
                 <h2 className="bb-title">
                   Log <span>In</span>
                 </h2>
-                <p>Best place to buy delicious cake bread</p>
+                <p>Best place to satisfy your cake cravings</p>
               </div>
             </Fade>
           </Col>
