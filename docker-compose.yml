@@ -11,10 +11,13 @@ services:
       - "5000:5000"
 
   frontend:
-    build: ./beelicious_fe
+    build: 
+     context: ./beelicious_fe
+     args: 
+      NEXT_PUBLIC_API_URL: http://13.60.228.234:5000/api
     container_name: frontend
     restart: always
     ports:
-      - "3000:3005"
+      - "3005:3005" #I changed the port to 3005 because 3000 is already in use by another application on my machine
     depends_on:
       - backend
